@@ -1,0 +1,41 @@
+<!--
+ Title: app.component.html
+ Author: Professor Krasso
+ Date: 05/25/2022
+ Modified By: Allan Trejo
+ Description: Assignment 1.5 root component HTML
+
+-->
+<!-- Navigation -->
+<nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #157f97;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">AT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Container  -->
+<div class="container"><br><br>
+  <h2>{{assignment}}</h2>
+  <br>
+  <div class="row ">
+    <div class="col-sm-6">
+      <!-- Left column declaration -->
+      <app-my-image></app-my-image>
+    </div>
+    <div class="col-sm-6" ng-model="app-my-details">
+      <!-- Right Column declaration -->
+      <app-my-details></app-my-details>
+    </div>
+  </div>
+</div> <!-- End Container -->

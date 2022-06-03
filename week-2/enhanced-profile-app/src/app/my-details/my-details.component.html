@@ -1,0 +1,23 @@
+<!--
+   Title: my-details.component.html
+ Author: Professor Krasso
+ Date: 65/02/2022
+ Modified By: Allan Trejo
+ Description: Assignment 2.3 right column component html
+
+-->
+
+<!-- Unordered list/ component to be placed in right column
+  Rendered content using Angular Data binding
+-->
+<ul>
+  <li>Name: {{ myProfile.fullName }} </li>
+  <li>Favorite Food: {{ myProfile.favoriteFood }}</li>
+  <li>Favorite Color: {{ myProfile.favoriteColor }}</li>
+  <li>Keywords:
+    <!-- ngFor Directive , loops over array using for/of  -->
+    <span *ngFor="let word of myProfile.keywords">
+      {{ word }}
+    </span>
+  </li>
+</ul>

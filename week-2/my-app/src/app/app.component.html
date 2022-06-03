@@ -1,0 +1,37 @@
+<!--
+   Title: app.component.html
+ Author: Professor Krasso
+ Date: 06/02/2022
+ Modified By: Allan Trejo
+ Description: Root template
+
+ -->
+
+<!--Navigation-->
+<nav class="nav navbar-expand-sm bg-dark navbar-dark">
+
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a href="" class="nav-link" routerLink="/home">Home</a>
+    </li>
+    <li class="nav-item ">
+      <a href="" class="nav-link" routerLink="/about">About</a>
+    </li>
+    <li class="nav-item ">
+      <a href="" class="nav-link" routerLink="/contact">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+<!-- End Navigation -->
+<div class="container">
+  <br><br>
+  <h2>Excersie 2.2 -Navigation</h2>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="alert alert-success" role="alert">
+        <!-- RouterOutlet Directive -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

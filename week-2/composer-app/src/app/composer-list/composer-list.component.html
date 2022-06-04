@@ -1,0 +1,17 @@
+<table class="table table-bordered mt-5 table-hover">
+  <thead class="thead-dark table-dark">
+    <tr>
+      <th scope="col">Composer Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Genre</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let composer of composers; let i = index">
+      <td scope="row">{{i + 100}}</td>
+      <td>{{ composer.fullName }}</td>
+      <td>{{ composer.genre }}</td>
+    </tr>
+  </tbody>
+</table>

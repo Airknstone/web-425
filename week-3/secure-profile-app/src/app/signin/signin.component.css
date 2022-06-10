@@ -1,0 +1,13 @@
+/* /**
+ *  Title: signin.component.css
+ *  Author: Professor Krasso
+ *  Date: 06/10/2022
+ *  Modified By: Allan Trejo
+ *  Description: signin styling Assignment 3.3 Passing Data to Routes, Part 2
+ */
+
+.signin-container {
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 10%;
+}

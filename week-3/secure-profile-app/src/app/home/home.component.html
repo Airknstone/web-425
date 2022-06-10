@@ -1,0 +1,53 @@
+<!--
+ Title: home.component.html
+ Author: Professor Krasso
+ Date: 06/10/2022
+ Modified By: Allan Trejo
+ Description: Assignment 3.3 Passing Data to Routes, Part 2
+
+-->
+<!-- Navigation -->
+<nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #157f97;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">AT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Container  -->
+<div class="container"><br><br>
+  <h2>Exercise 3.3 - Passing Data to Routes, Part 2</h2>
+  <br> <br>
+  <!-- NgIF directive else render ngTemplate -->
+  <div class="row " *ngIf="isLoggedIn; else showError">
+    <div class="col-sm-6">
+      <!-- Left column declaration -->
+      <app-my-image></app-my-image>
+    </div>
+    <div class="col-sm-6" ng-model="app-my-details">
+      <!-- Right Column declaration -->
+      <app-my-details></app-my-details>
+    </div>
+  </div>
+  <!-- Else NG Template -->
+  <ng-template #showError>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="alert alert-danger">
+          You are not Authorized to view this content.
+        </h4>
+      </div>
+    </div>
+  </ng-template>
+
+</div> <!-- End Container -->

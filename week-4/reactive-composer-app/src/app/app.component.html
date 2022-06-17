@@ -1,0 +1,41 @@
+<!--
+ Title: app.component.html
+ Author: Professor Krasso
+ Date: 06/16/2022
+ Modified By: Allan Trejo
+ Description: Exercise 4.3 - Handling Events with Observables
+
+-->
+<!-- Navigation -->
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ">
+        <a class="nav-link active" aria-current="page" href="/composer">Composer List</a>
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" href="/contact">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Container  -->
+<div class="container px-5">
+  <br><br>
+  <h2>{{assignment}}</h2>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-12 ">
+      <div class="container mt-4 ">
+        <!-- RouterOutlet Directive -->
+        <router-outlet></router-outlet>
+
+      </div>
+
+    </div>
+  </div>
+</div><!-- End Container -->

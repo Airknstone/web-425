@@ -1,9 +1,9 @@
 /*
    Title: app.module.ts
  Author: Professor Krasso
- Date: 06/16/2022
+ Date: 06/17/2022
  Modified By: Allan Trejo
- Description: root module
+ Description: Assignment 4.4 - Async Pipe
  */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';

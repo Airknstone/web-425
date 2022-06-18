@@ -1,9 +1,9 @@
 /*
    Title: composer.service.ts
  Author: Professor Krasso
- Date: 06/16/2022
+ Date: 06/17/2022
  Modified By: Allan Trejo
- Description: Excercise 4.2 - Inversion of Control and Dependency Injection
+ Description: Assignment 4.4 - Async Pipe
  */
 import { Injectable } from '@angular/core';
 import { IComposer } from './composer.interface';

@@ -1,0 +1,24 @@
+<!--
+ Title: books-detail-list.component.html
+ Author: Professor Krasso
+ Date: 06/30/2022
+ Modified By: Allan Trejo
+ Description: Assignment 6.2 - Output Properties
+  Resources: Material Design https://material.angular.io/components
+-->
+<mat-card>
+  <mat-card-title class="blue">
+    Title: {{book.title}}
+  </mat-card-title> <br>
+  <mat-card-content>
+    <div fxLayout="column">
+      <p>ISBN: {{book.isbn}}</p>
+      <p>Authors: {{book.authors}}</p>
+      <p>Number of Pages: {{book.numOfPages}}</p>
+      <p>Description: {{book.description}}</p>
+    </div>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" mat-dialog-close="confirm">Ok</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

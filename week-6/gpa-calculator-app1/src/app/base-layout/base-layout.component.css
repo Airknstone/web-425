@@ -1,0 +1,16 @@
+/*
+ Title: base-layout.components.css
+ Author: Professor Krasso
+ Date: 06/30/2022
+ Modified By: Allan Trejo
+ Description: Assignment 6.3 - Layouts
+  Resources: Material Design https://material.angular.io/components
+*/
+.logo {
+  margin-top: 5px;
+}
+.main-container {
+  padding-top: 25px;
+  width: 80%;
+  margin: 0 auto;
+}

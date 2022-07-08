@@ -1,0 +1,16 @@
+/*
+ Title: base-layout.components.css
+ Author: Professor Krasso
+ Date: 07/06/2022
+ Modified By: Allan Trejo
+ Description: Assignment 7.2 - Reactive Forms
+  Resources: Material Design https://material.angular.io/components
+*/
+.logo {
+  margin-top: 5px;
+}
+.main-container {
+  padding-top: 25px;
+  width: 80%;
+  margin: 0 auto;
+}

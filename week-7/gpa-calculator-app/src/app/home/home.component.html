@@ -1,0 +1,75 @@
+<!--
+ Title: home.component.html
+ Author: Professor Krasso
+ Date: 07/09/2022
+ Modified By: Allan Trejo
+ Description: Assignment 7.3 - Form Validation
+  Resources: Material Design https://material.angular.io/components
+-->
+
+<!-- Parent Interface using flex/layout and Material -->
+<div fxLayout="row wrap" fxLayoutGap="20px">
+  <!--Begin Left Div -->
+  <div fxFlex class="grade-form">
+
+    <mat-card class="mat-elevation-z10">
+      <mat-card-title>Grade Entry</mat-card-title>
+      <mat-card-content fxLayout="column">
+
+        <form fxLayout="column" fxLayoutGap="16px" [formGroup]="transcriptForm"
+          (ngSubmit)="onSubmit($event); transcriptForm.reset()">
+          <mat-form-field appearance="fill">
+            <!-- Input course -->
+            <mat-label>Course</mat-label>
+            <!-- bind data to course variable defined by ITranscript Interface -->
+            <input matInput required id="txtCourse" formControlName="course" />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+
+            <mat-select required formControlName="grade" name='selectGrade' placeholder=" Select">
+              <!-- bind selection value to grade variable defined by ITranscript Interface -->
+              <mat-option *ngFor="let grade of selectableGrades" [value]="grade">{{grade}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <button mat-raised-button color="primary" [disabled]="!transcriptForm.valid">Save</button>
+        </form>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <!-- End Left Div -->
+  <!-- Begin Right Div -->
+  <div fxFlex class="grade-summary">
+    <!-- Clears entries -->
+    <button mat-button color="primary" style="margin-bottom:20px ;" (click)="clearEntries()">Clear
+      Transcript</button>
+    <mat-card class="mat-elevation-z10">
+      <mat-card-title>Transcript</mat-card-title>
+      <mat-card-content>
+        <!-- Child component pass down course/grade strings -->
+        <app-grade-summary *ngFor="let entry of transcriptEntries" [course]="entry.course" [grade]="entry.grade">
+        </app-grade-summary>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <!-- End Right Div -->
+</div>
+<!-- End Container -->
+
+<br>
+<br>
+<!-- Bottom Row -->
+<div fxLayout="column" fxLayoutGap="20px">
+
+  <div fxFlex class="gpa">
+    <!-- Event Binding -->
+    <button mat-button color="primary" style="margin-bottom:20px ;" (click)="calculateResults()">Calculate
+      GPA</button>
+    <mat-card class="mat-elevation-z10">
+      <mat-card-title style="text-align: center">
+        <!-- property bind results to child component -->
+        <app-gpa [gpaTotal]="gpaTotal"></app-gpa>
+      </mat-card-title>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<!--
+ Title: sign-in.component.html
+ Author: Professor Krasso
+ Date: 07/09/2022
+ Modified By: Allan Trejo
+ Description: Assignment 7.3 - Form Validation
+  Resources: Material Design https://material.angular.io/components
+-->
+
+<!-- Sign in Component layout -->
+<div fxLayout="column">
+  <div fxFlex>
+    <mat-card class="mat-elevation-z8 signin-container">
+      <mat-card-title>Student Sign In</mat-card-title>
+      <mat-card-subtitle>You Must Enter a Valid Student ID to Proceed</mat-card-subtitle>
+      <mat-card-content>
+        <div class="msg-error" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+        <div *ngIf="form.studentId.errors && form.studentId.touched">
+          <div class="msg-error"> Only Numeric Values Allowed.</div>
+        </div>
+        <mat-card class="mat-elevation-z0" fxLayout="column" fxLayoutGap="10px">
+
+          <form [formGroup]="signinForm" (ngSubmit)="onSubmit() ; signinForm.reset()">
+            <mat-card-content>
+
+              <mat-form-field fxFlex appearance="fill">
+                <mat-label for="txtStudentId" id="lblStudentId">Student Id</mat-label>
+                <input type="text" required matInput formControlName="studentId" id="txtStudentId"
+                  name="txtStudentId" />
+              </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions>
+              <button type="submit" fxFlex mat-raised-button color="primary"
+                [disabled]="!signinForm.valid">Submit</button>
+            </mat-card-actions>
+          </form>
+
+        </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

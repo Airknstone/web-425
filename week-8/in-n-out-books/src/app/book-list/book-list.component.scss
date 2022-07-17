@@ -1,0 +1,33 @@
+/*
+ Title: books-list.component.scss
+ Author: Professor Krasso
+ Date: 07/16/2022
+ Modified By: Allan Trejo
+ Description: Assignment 8.2 – Server-side Communications
+  Resources: Material Design https://material.angular.io/components
+*/
+.a-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.a-link:hover {
+  text-decoration: underline;
+}
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto;
+  padding: 25px;
+}
+.grid-container__item {
+  padding: 20px;
+  font-size: 30px;
+}
+.grid-container__href:hover {
+  text-decoration: underline;
+}
+.grid-container__href {
+  text-decoration: none;
+  cursor: pointer;
+}

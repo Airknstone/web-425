@@ -7,9 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "predeploy": "ng build --prod --base-href=/gpa-calculator-app/",
-    "deploy": "npx ngh --dir=dist/gpa-calculator-app/"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {

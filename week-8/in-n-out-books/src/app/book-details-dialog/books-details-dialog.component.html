@@ -1,0 +1,26 @@
+<!--
+ Title: books-detail-list.component.html
+ Author: Professor Krasso
+ Date: 07/16/2022
+ Modified By: Allan Trejo
+ Description: Assignment 8.2 – Server-side Communications
+  Resources: Material Design https://material.angular.io/components
+-->
+
+<!-- renders inside of matdialogue from book-list html-->
+<mat-card>
+  <mat-card-title class="blue">
+    Title: {{book.title}}
+  </mat-card-title> <br>
+  <mat-card-content>
+    <div fxLayout="column">
+      <p>ISBN: {{book.isbn}}</p>
+      <p>Authors: {{book.authors}}</p>
+      <p>Number of Pages: {{book.numOfPages}}</p>
+      <p>Description: {{book.description}}</p>
+    </div>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" mat-dialog-close="confirm">Ok</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

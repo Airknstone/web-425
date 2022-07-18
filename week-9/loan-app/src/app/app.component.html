@@ -1,0 +1,25 @@
+<mat-toolbar class="toolbar" color="primary">
+  <mat-toolbar-row>
+    <div style="width: 88%; font-size: 1.5rem; font-style: italic;">Slytherin Financing</div>
+    <div>
+      <div>
+        <button routerLink="/calculator" style="margin-right: 20px" mat-icon-button class="example-icon favorite-icon"
+          matTooltip="Calculator" matTooltipHideDelay="100">
+          <mat-icon>calculate</mat-icon>
+        </button>
+        <button routerLink="/contact" style="margin-right: 20px" mat-icon-button class="example-icon"
+          matTooltip="Contact Us" matTooltipHideDelay="100">
+          <mat-icon>support_agent</mat-icon>
+        </button>
+        <button routerLink="/about" mat-icon-button class="example-icon" matTooltip="About Us"
+          matTooltipHideDelay="100">
+          <mat-icon>explore</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
